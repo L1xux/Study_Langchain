@@ -4,8 +4,3 @@ def get_profile_url_tavily(name: str):
     search = TavilySearchResults()
     res = search.invoke(f"{name}")
     return res
-
-
-if __name__ == "__main__":
-    test = get_profile_url_tavily("Eden Marco")
-    print(test)

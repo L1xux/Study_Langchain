@@ -45,8 +45,3 @@ def lookup(name: str) -> str:
     
     linked_profile_url = result["output"]
     return linked_profile_url
-
-
-if __name__ == "__main__":
-    linkedin_url = lookup(name="Eden Marco Udemy")
-    print(linkedin_url)

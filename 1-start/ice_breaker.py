@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
 from agents.linkedin_lookup_agent import lookup
-from thired_parties.linkedin import scrape_linkedin_profile
+from third_parties.linkedin import scrape_linkedin_profile
 from output_parser import Summary, summary_parser
 
 def ice_break_with(name: str) -> Tuple[Summary, str]:
@@ -16,7 +16,6 @@ def ice_break_with(name: str) -> Tuple[Summary, str]:
         1. a short summary
         2. two interesting facts about them
         \n{format_instructions}
-        
     """
     
     summary_prompt_template = PromptTemplate(
@@ -37,4 +36,4 @@ def ice_break_with(name: str) -> Tuple[Summary, str]:
 if __name__ == '__main__':
     load_dotenv()
     
-    ice_break_with(name="Eden Marco Udemy")
+    ice_break_with(name="이의진 메리츠화재")
